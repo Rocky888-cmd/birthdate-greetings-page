@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Jonang 🎂💛</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <!-- Background sparkle layer -->
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <!-- Floating hearts -->
+  <div id="heartsLayer" aria-hidden="true"></div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="badge">🎉 Special Day</div>
+      <h1>Happy Birthday, <span class="name">Jonang</span> 🎂💛</h1>
+      <p class="sub">
+        A little website, but a big message — made with sincerity.
+      </p>
+
+      <div class="cta-row">
+        <button id="btnStart" class="btn primary">Open Your Message ✨</button>
+        <button id="btnMusic" class="btn ghost" title="Optional">Play Music ♪</button>
+      </div>
+
+      <p class="hint">
+        Tip: Tap “Open Your Message” then read slowly… 😊
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Message Card -->
+    <section class="card" id="messageCard">
+      <div class="card-top">
+        <h2>For You, Jonang 💛</h2>
+        <div class="pill">Read line by line</div>
+      </div>
+
+      <div class="message-box" id="messageBox" aria-live="polite"></div>
+
+      <div class="controls">
+        <button id="btnPrev" class="btn ghost" disabled>← Back</button>
+        <button id="btnNext" class="btn primary" disabled>Next →</button>
+      </div>
+
+      <div class="progress">
+        <div class="bar" id="progressBar"></div>
+      </div>
+      <p class="small" id="progressText">0 / 0</p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="card">
+      <div class="card-top">
+        <h2>Little Moments I Kept 📸</h2>
+        <div class="pill">Tap a photo</div>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+
+      <p class="small">
+        ---mga photos mo. hahaha ---
+      </p>
+    </section>
+
+    <!-- Ending -->
+    <section class="card ending">
+      <h2>Always cheering for you ✨</h2>
+      <p>
+        When life gets heavy, remember: you are capable, you are strong,
+        and you deserve to be celebrated — not just today.
+      </p>
+      <button id="btnCelebrate" class="btn primary big">Celebrate 🎉</button>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img id="lightboxImg" alt="Photo preview" />
+  </div>
+
+  <!-- Optional Music -->
+  <audio id="bgm" loop>
+    <source src="assets/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
